@@ -1,1 +1,77 @@
-/* Place custom css here. */
+/* Custom font changes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  --font-primary: 'Crimson Pro', Georgia, serif;
+  --font-headings: 'Source Serif Pro', Georgia, serif;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+}
+
+.prose {
+  font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  letter-spacing: -0.02em;
+}
+
+/* Adjust avatar size */
+.aspect-square.w-16 {
+  width: 3rem !important; /* Smaller avatar (48px) */
+}
+
+/* Reduce space after avatar/bio section */
+.-mt-2.mb-16 {
+  margin-bottom: 2rem !important; /* Reduced from 4rem (16) to 2rem (8) */
+}
+
+/* Adjust typography for better readability */
+.prose {
+  font-size: 1.25rem;
+}
+
+article {
+  font-size: 1.25rem;
+}
+
+/* Enhance links for typewriter style */
+a:not(.btn) {
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease;
+}
+
+a:hover:not(.btn) {
+  border-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Dark mode adjustments */
+.dark a:not(.btn) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark a:hover:not(.btn) {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Center all images */
+.prose img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Add a subtle border to images */
+.prose img:not(.rounded-full) {
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
